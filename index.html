@@ -70,8 +70,25 @@
 				margin:20px auto;
 				box-sizing:border-box;
 			}
+		#background {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
   		</style>
 		<script>
+			function changeBackground() {
+  var backgroundElement = document.getElementById("background");
+  var currentBackground = backgroundElement.style.backgroundImage;
+
+  /*判断当前背景图，根据不同的情况切换到不同的背景图*/
+  if (currentBackground === "url('image1.jpg')") {
+    backgroundElement.style.backgroundImage = "url('image2.jpg')";
+  } else {
+    backgroundElement.style.backgroundImage = "url('image1.jpg')";
+  }
+}
 			window.onload = function() {
 				var numbers = ["tip: 每次打开的tip都是随机的！","tip: 每隔一段时间来就会改变一点东西哦！", "tip: tip功能chatGPT帮繄溦写的", "tip: 这是一条tip。", "tip: 如果我哪里写错了或者那里有bug请B站私信告诉我qwq", "tip: 繄溦是个天才！","tip:水的沸点是100度，是钝角。"];
 				var randomNumber = Math.floor(Math.random() * numbers.length);
@@ -140,5 +157,6 @@
     	<div class="beijing">
     		<img src="./tu/warma-boom8 .jpg" style="object-fit: cover; position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; opacity: 1; z-index: -1;">
     	</div>
+<button id="changeBtn">切换背景图</button>
 	</body>
 </html>
