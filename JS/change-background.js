@@ -5,15 +5,15 @@ function bg1(){
 }
 function bg2(){
     var img = document.querySelector('.beijing img')
-    img.setAttribute('src','https://i0.hdslb.com/bfs/new_dyn/45243ecdb1bd905c433df516604f6f40269116924.jpg')
+    img.setAttribute('src','//s1.ax1x.com/2023/09/10/pPc8dcd.jpg')
 }
 function bg3(){
     var img = document.querySelector('.beijing img')
-    img.setAttribute('src','https://i0.hdslb.com/bfs/new_dyn/2c7d30e744fc094c81e2a8b7f871efba269116924.jpg')
+    img.setAttribute('src','//s1.ax1x.com/2023/09/10/pPc8U9e.jpg')
 }
 function bg4(){
     var img = document.querySelector('.beijing img')
-    img.setAttribute('src','https://i0.hdslb.com/bfs/new_dyn/03f8d37e7e09a176ec4d0b109f1931a1269116924.jpg')
+    img.setAttribute('src','//s1.ax1x.com/2023/09/10/pPc8a1H.jpg')
 }
 function bg5(){
     var img = document.querySelector('.beijing img')
@@ -25,7 +25,7 @@ function bg6(){
 }
 function bg7(){
     var img = document.querySelector('.beijing img')
-    img.setAttribute('src','https://i0.hdslb.com/bfs/new_dyn/04f0b201f84076874db4c336ec6e5bdc269116924.jpg')
+    img.setAttribute('src','//s1.ax1x.com/2023/09/10/pPc8wjA.jpg')
 }
 function bg8(){
     var img = document.querySelector('.beijing img')
