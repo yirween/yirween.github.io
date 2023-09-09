@@ -5,15 +5,15 @@ function bg1(){
 }
 function bg2(){
     var img = document.querySelector('.beijing img')
-    img.setAttribute('src','https://i0.hdslb.com/bfs/new_dyn/45243ecdb1bd905c433df516604f6f40269116924.jpg')
+    img.setAttribute('src','//i0.hdslb.com/bfs/new_dyn/45243ecdb1bd905c433df516604f6f40269116924.jpg')
 }
 function bg3(){
     var img = document.querySelector('.beijing img')
-    img.setAttribute('src','https://i0.hdslb.com/bfs/new_dyn/2c7d30e744fc094c81e2a8b7f871efba269116924.jpg')
+    img.setAttribute('src','//album.biliimg.com/bfs/new_dyn/45243ecdb1bd905c433df516604f6f40269116924.jpg')
 }
 function bg4(){
     var img = document.querySelector('.beijing img')
-    img.setAttribute('src','https://i0.hdslb.com/bfs/new_dyn/03f8d37e7e09a176ec4d0b109f1931a1269116924.jpg')
+    img.setAttribute('src','//s1.ax1x.com/2023/09/09/pPce3in.jpg')
 }
 function bg5(){
     var img = document.querySelector('.beijing img')
