@@ -1,3 +1,11 @@
 .home-link {
-    float: left;
+    float:right;
+    position: relative;
+    width: 70%;
+    margin: 20px auto 20px;
+    padding: 30px 50px;
+    background-color: #fb989a50;
+    backdrop-filter: blur(2px);
+    border-radius: 25px;
+    box-sizing:border-box;
 }

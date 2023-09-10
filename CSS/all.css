@@ -1,0 +1,110 @@
+body {
+    color: #fb989a;
+}
+a{
+    text-decoration:none;
+    color:#fafafa;
+}
+a:hover{
+    color:#ab989a;
+}
+.tip{
+    float:left;
+    color:#ab989a;
+    width:70%;
+    margin:20px auto;
+    box-sizing:border-box;
+}
+.qwq {
+    width: 88%;
+    padding: 8px 20px 8px 32px;
+    height: 10%;
+    float: left;
+}
+.qwq > .to-change-ground {
+    border-style: solid;
+    border: 1px 0px 1px 0px;
+    border-color: #ffffff50;
+}
+button {
+    background-color: #dcb3b47a;
+    border: none;
+    color: white;
+    padding: 8px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 25px;
+}
+.qwq > .change-text-color >.cFB989A > button {
+    background-color: #FB989A;
+    border: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    padding: 16px;
+}
+.qwq > .change-text-color >.cFE0302 > button {
+    background-color: #FE0302;
+    border: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    padding: 16px;
+}
+.qwq > .change-text-color >.cFFAA02 > button {
+    background-color: #FFAA02;
+    border: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    padding: 16px;
+}
+.qwq > .change-text-color >.cFFFF00 > button {
+    background-color: #FFFF00;
+    border: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    padding: 16px;
+}
+.qwq > .change-text-color >.c00CD00 > button {
+    background-color: #00CD00;
+    border: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    padding: 16px;
+}
+.qwq > .change-text-color >.c89D5FF > button {
+    background-color: #89D5FF;
+    border: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    padding: 16px;
+}
+.qwq > .change-text-color >.c000000 > button {
+    background-color: #000000;
+    border: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    padding: 16px;
+}
+.qwq > .change-text-color >.cFFFFFF > button {
+    background-color: #FFFFFF;
+    border: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    padding: 16px;
+}
+.qwq > .change-text-color > .btc {
+    border-style: solid;
+    border: #FFFFFF;
+    float: left;
+}

@@ -2,4 +2,10 @@
     float: left;
     background-color: #ab989a50;
     margin: 20px 8% 50% 8%;
+    padding: 32px 16px 400px;
+    backdrop-filter: blur(2px);
+    position: relative;
+    width: 70%;
+    border-radius: 25px;
+    box-sizing:border-box;
 }

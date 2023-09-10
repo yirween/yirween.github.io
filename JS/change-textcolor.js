@@ -9,7 +9,7 @@ const cFFFFFF = document.getElementById("change-color-白");
 const body = document.body;
 
 cFB989A.addEventListener("click", function() {
-    body.style.color = "#fb989a";
+    body.style.color = "#FB989A";
 });
 cFE0302.addEventListener("click", function() {
     body.style.color = "#FE0302";
