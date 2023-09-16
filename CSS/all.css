@@ -103,8 +103,26 @@ button {
     cursor: pointer;
     padding: 16px;
 }
-.qwq > .change-text-color > .btc {
-    border-style: solid;
-    border: #FFFFFF;
+.qwq > .change-text-color > div > button{
+    width: 16px;
     float: left;
+}
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    -webkit-box-shadow:inset006pxrgba(0,0,0,0);
+    border-radius:10px;
+    background-color: #00000000;
+}
+::-webkit-scrollbar-thumb {
+    border-radius:10px;
+    background:#fb989a83;
+    -webkit-box-shadow:inset006pxrgba(0,0,0,0);
+}
+::-webkit-scrollbar-thumb:window-inactive {
+    background:#fb989a83;
+}
+::-webkit-scrollbar-track {
+    background-color: transparent;
 }
