@@ -1,3 +1,5 @@
+var random = Math.random(); // 生成一个随机数
+img.setAttribute('src', bgImage + '?v=' + random); // 添加随机参数到URL中
 
 function setBackgroundImage() {
     var bgImage = getCookie("bgImage");
