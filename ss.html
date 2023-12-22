@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+	<style>
+		h1{padding:0px; margin:0px;display: inline;}
+		button{margin:10% 0% 0 80%; height:40px; width:18%}
+</style>
+
+</head>
+<body>
+
+	<h1 id="c"></h1><h1>+</h1><h1 id="d"></h1><h1>=</h1>
+	<br><br><br><br><button onclick="myFunction()">新算式</button>
+	<script>
+		function daan( ){
+		document.write(e)
+		}
+		
+						
+function myFunction() {
+  const a = Math.floor(Math.random() * (10 - 1 + 1)) + 1;
+  const b = Math.floor(Math.random() * (10 - 1 + 1)) + 1;
+  
+  //document.write(`${a}+${b}=`);
+	document.getElementById("c").innerHTML = a;
+	document.getElementById("d").innerHTML = b;
+	document.getElementById("e").innerHTML = a + b; 
+}
+	
+</script>
+	
+</body>
+</html>
