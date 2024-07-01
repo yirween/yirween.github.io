@@ -20,27 +20,28 @@
 				<div class="dh"><li><a href="//bing.com" title="去搜点什么">bing</a></li></div>
 				<div class="dh"><li><a href="//baidu.com" title="Baidu">百度</a></li></div>
 				<div class="dh"><li><a href="//outlook.live.com/mail/0/" title="查看邮箱">outlook邮箱</a></li></div>
-				<div class="dh"><li><a href="//www.desmos.com/calculator?lang=zh-CN">desmos图形计算器</a></li></div>
+				<div class="dh"><li><a href="//www.desmos.com/calculator?lang=zh-CN" title="领略数学之美">desmos图形计算器</a></li></div>
 				<div class="dh"><li><a href="//像素点.cn" title="和小像素点一起玩吧！">小像素点</a></li></div>
 				<div class="dh"><li><a href="//163.music.com" title="music!">网易云音乐</a></li></div>
 				<div class="dh"><li><a href="//cn.puzzle-nonograms.com/" title="来玩数织吧！">数织</a></li></div>
 				<div class="dh"><li><a href="//bigjpg.com" title="AI图片放大、除噪">bigjpg</a></li></div>
-				<div class="dh"><li><a href="//mfuns.net" title="喵站">Mfuns</a></li></div>
-				<div class="dh"><li><a href="//skr3.cc" title="樱空">樱之空动漫</a></li></div>
 				<div class="dh"><li><a href="//space.bilibili.com/53456" title="Warma!">沃玛的B站空间</a></li></div>
 				<div class="dh"><li><a href="//live.bilibili.com/59901" target="_blank" title="她多久没开直播了？">沃玛B站直播间</a></li></div>
 				<div class="dh"><li><a href="//weibo.com/n/_warma_" title="沃玛的日常！">沃玛的微博</a></li></div>
+				<div class="dh"><li><a href="" title=""></a></li></div>
+				<div class="dh"><li><a href="" title=""></a></li></div>
+				<div class="dh"><li><a href="" title=""></a></li></div>
 			</ul>
-		        <div style="width:100%;">
-                        <ul>
-		                <br>
-                                <h5><div class="dh">废弃的链接</h5></div>
-                                <h6><span id="联系方式" onclick="document.getElementById('联系方式').innerHTML='<br>
-			                <div class="dh"><li><a href="//draft.art/home">draft.art</a></li></div>
-                                        <div class="dh"><li><a href="//chat.tomyres.com/">chat.tomyres.com</a></li></div>><a><br>点此展开</a></span>
-                                </h6>
-                       </ul>
-		         </div>
+            <ul>
+		    <br>
+                <h5 >废弃的链接</h5>
+				<h5 onclick="SeeOldLink()" style="color: #f0f0f0;float: left;margin: 0 0;">查看/收起</h5>
+				<div id="old-link" style="height: 5px;overflow: hidden;">
+				<h6>
+					<br>
+					<div class="dh"><li><a href="//draft.art/home">draft</a></li></div>
+					<div class="dh"><li><a href="//chat.tomyres.com/">chat.tomyres.com</a></li></div>
+				</h6></ul></div>
 		</div>
     	<div class="顶">
         	<h1>
@@ -48,7 +49,7 @@
         		<a href="//yirween.github.io/" terget="_blank" title="点击返回主页"><br>返回</a>
         	</h1>
     	</div>
-
+			</span>
     	<div class="link">
 	    	<h3>点击下方文字进行传送</h3>
       		<ul>
@@ -59,7 +60,7 @@
           	<li><a href="//像素点.cn/AB989A" target="_blank" title="点击前往像素点.cn">繄溦的小像素点</a></li>
       		</ul>
 	    	<h9>
-			联系方式:<span id="联系方式" onclick="document.getElementById('联系方式').innerHTML='<br>QQ：2155384970<br>微信：s340482<br>Outlook邮箱：s5020@outlook.com<br>163邮箱：s340481@163.com<br>gmail：yirween@gmail.com';"><a href=""><br>点此展开</a></span>
+			联系方式:<span id="联系方式" onclick="document.getElementById('联系方式').innerHTML='<br>QQ：2155384970<br>微信：s340482<br>Outlook邮箱：s5020@outlook.com<br>163邮箱：s340481@163.com<br>gmail：yirween@gmail.com';"><br><p style="color: #f0f0f0;">点此展开</p></span>
 	    	</h9>
     	</div>
 
@@ -120,4 +121,17 @@
 	<script src="./JS/tip.js"></script>
 	<script src="./JS/change-background.js"></script>
 	<script src="./JS/change-textcolor.js"></script>
+	<script>
+		let isExpanded = false; 
+
+function SeeOldLink() {
+    const oldlink = document.getElementById('old-link');
+    if (isExpanded) {
+        oldlink.style.height = '0px';
+    } else {
+        oldlink.style.height = 'auto';
+    }
+    isExpanded = !isExpanded; 
+}
+	</script>
 </html>
