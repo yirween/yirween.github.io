@@ -1,3 +1,8 @@
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
 .home-link {
     float:right;
     position: relative;
@@ -9,6 +14,49 @@
     border-radius: 25px;
     box-sizing:border-box;
 }
+
+.home-link1 {
+  height: 100px;
+  width: 100px;
+  padding: 8px;
+  background: #ffffff30;
+  border-radius: 25px;
+  float: left;
+  margin: 8px;
+}
+
+.home-link2 {
+  height: 100px;
+  width: 100px;
+  padding: 8px;
+  background: #ffffff30;
+  border-radius: 25px;
+  float: left;
+  margin: 8px;
+}
+
+.home-link3 {
+  height: 100px;
+  width: 100px;
+  padding: 8px;
+  background: #ffffff30;
+  border-radius: 25px;
+  float: left;
+  margin: 8px;
+
+}
+
+.home-link4 {
+  height: 100px;
+  width: 100px;
+  padding: 8px;
+  background: #ffffff30;
+  border-radius: 25px;
+  float: left;
+  margin: 8px;
+
+}
+
 .countdown{
     float:left;
     position: relative;
@@ -20,3 +68,5 @@
     border-radius: 25px;
     box-sizing:border-box;
 }
+
+
