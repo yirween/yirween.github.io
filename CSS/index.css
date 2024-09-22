@@ -13,6 +13,14 @@ body {
   
 }
 
+.home_page_main {
+  background-color:#FFFFFF;
+  height:auto;
+  width:100%;
+  margin:0 0 0 0;
+  z-index:0;
+}
+
 .home-link {
     float:right;
     position: relative;
@@ -23,6 +31,7 @@ body {
     backdrop-filter: blur(2px);
     border-radius: 25px;
     box-sizing:border-box;
+    z-index:1;
 }
 
 .home-link1 {
@@ -33,6 +42,7 @@ body {
   border-radius: 25px;
   float: left;
   margin: 8px;
+  z-index:1;
 }
 
 .home-link2 {
@@ -43,6 +53,7 @@ body {
   border-radius: 25px;
   float: left;
   margin: 8px;
+  z-index:1;
 }
 
 .home-link3 {
@@ -53,7 +64,7 @@ body {
   border-radius: 25px;
   float: left;
   margin: 8px;
-
+  z-index:1;
 }
 
 .home-link4 {
@@ -64,8 +75,10 @@ body {
   border-radius: 25px;
   float: left;
   margin: 8px;
-
+  z-index:1;
 }
+
+a {}
 
 .countdown{
     float:left;
