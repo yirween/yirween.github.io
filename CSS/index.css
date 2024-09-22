@@ -3,6 +3,16 @@ body {
   overflow: hidden;
 }
 
+.head_img {
+  height:100%;
+  width:100%;
+}
+
+.head_text {
+  margin:40% 30% 40% 30%;
+  
+}
+
 .home-link {
     float:right;
     position: relative;
