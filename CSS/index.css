@@ -3,24 +3,6 @@ body {
   overflow: hidden;
 }
 
-.head_img {
-  height:100%;
-  width:100%;
-}
-
-.head_text {
-  margin:40% 30% 40% 30%;
-  
-}
-
-.home_page_main {
-  background-color:#FFFFFF;
-  height:auto;
-  width:100%;
-  margin:0 0 0 0;
-  z-index:0;
-}
-
 .home-link {
     float:right;
     position: relative;
@@ -31,7 +13,8 @@ body {
     backdrop-filter: blur(2px);
     border-radius: 25px;
     box-sizing:border-box;
-    z-index:1;
+    display: flex;
+    justify-content: center;
 }
 
 .home-link1 {
@@ -41,8 +24,10 @@ body {
   background: #ffffff30;
   border-radius: 25px;
   float: left;
-  margin: 8px;
-  z-index:1;
+  margin: 8px 50px;
+  /* 浮动动画 */
+  position: relative;
+  animation: float 5.01s infinite;
 }
 
 .home-link2 {
@@ -52,8 +37,10 @@ body {
   background: #ffffff30;
   border-radius: 25px;
   float: left;
-  margin: 8px;
-  z-index:1;
+  margin: 8px 50px;
+  /* 浮动动画 */
+  position: relative;
+  animation: float 5.02s infinite;
 }
 
 .home-link3 {
@@ -63,8 +50,11 @@ body {
   background: #ffffff30;
   border-radius: 25px;
   float: left;
-  margin: 8px;
-  z-index:1;
+  margin: 8px 50px;
+  /* 浮动动画 */
+  position: relative;
+  animation: float 5s infinite;
+
 }
 
 .home-link4 {
@@ -74,11 +64,12 @@ body {
   background: #ffffff30;
   border-radius: 25px;
   float: left;
-  margin: 8px;
-  z-index:1;
-}
+  margin: 8px 50px;
+  /* 浮动动画 */
+  position: relative;
+  animation: float 5.04s infinite;
 
-a {}
+}
 
 .countdown{
     float:left;
@@ -93,3 +84,15 @@ a {}
 }
 
 
+/* 浮动动画本体 */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

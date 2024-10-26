@@ -3,7 +3,7 @@
     height: 8%;
     top: 0;
     left: 0;
-    background: #a0d16820;
+    background: #a0d16800;
     position: fixed;
     z-index: 10;
 }
@@ -15,6 +15,7 @@
     text-align: center;
     background: #00000010;
 }
+/* 顶部公告 */
 .xlcm {
     color:#fe0302;
     width:90%;
