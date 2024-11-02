@@ -1,98 +1,77 @@
+html {
+  height: 100%;
+}
+
 body {
   height: 100%;
+  color: #fff;
   overflow: hidden;
 }
 
-.home-link {
-    float:right;
-    position: relative;
-    width: 70%;
-    margin: 20px auto 20px;
-    padding: 30px 50px;
-    background-color: #fb989a50;
-    backdrop-filter: blur(2px);
-    border-radius: 25px;
-    box-sizing:border-box;
-    display: flex;
-    justify-content: center;
-}
-
-.home-link1 {
-  height: 100px;
-  width: 100px;
-  padding: 8px;
-  background: #ffffff30;
-  border-radius: 25px;
-  float: left;
-  margin: 8px 50px;
-  /* 浮动动画 */
-  position: relative;
-  animation: float 5.01s infinite;
-}
-
-.home-link2 {
-  height: 100px;
-  width: 100px;
-  padding: 8px;
-  background: #ffffff30;
-  border-radius: 25px;
-  float: left;
-  margin: 8px 50px;
-  /* 浮动动画 */
-  position: relative;
-  animation: float 5.02s infinite;
-}
-
-.home-link3 {
-  height: 100px;
-  width: 100px;
-  padding: 8px;
-  background: #ffffff30;
-  border-radius: 25px;
-  float: left;
-  margin: 8px 50px;
-  /* 浮动动画 */
-  position: relative;
-  animation: float 5s infinite;
-
-}
-
-.home-link4 {
-  height: 100px;
-  width: 100px;
-  padding: 8px;
-  background: #ffffff30;
-  border-radius: 25px;
-  float: left;
-  margin: 8px 50px;
-  /* 浮动动画 */
-  position: relative;
+.ToHome-tip {
+  position: fixed;
+  bottom: 8px; 
+  color: aliceblue;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; 
   animation: float 5.04s infinite;
-
 }
 
-.countdown{
-    float:left;
-    position: relative;
-    width: 50%;
-    margin: 30px 10% 20px;
-    padding: 30px 50px;
-    background-color: #fff; 
-    backdrop-filter: blur(2px);
-    border-radius: 25px;
-    box-sizing:border-box;
-}
-
-
-/* 浮动动画本体 */
 @keyframes float {
   0% {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-5px);
+    transform: translateY(20px);
   }
   100% {
     transform: translateY(0);
   }
+}
+
+/* 背景图 */
+.background-img {
+  object-fit: cover;
+  position: fixed;
+  top: -20px;
+  left: -20px;
+  width: 115%;
+  height: 115%;
+  opacity: 1;
+  z-index: -1;
+  filter: blur(10px);
+}
+
+/* 背景图根据屏幕调整模糊 */
+@media (max-width: 999px) {
+  .background-img {
+      filter: blur(10px);
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1500px) {
+  .background-img {
+      filter: blur(15px);
+  }
+}
+
+@media (min-width: 1501px) {
+  .background-img {
+      filter: blur(20px);
+  }
+}
+
+.ToHome-Light {
+  background-color: #fff;
+  object-fit: cover;
+  position: fixed;
+  top: -5%;
+  left: -5%;
+  width: 115%;
+  height: 115%;
+  opacity: 0;
+  z-index: 9;
 }

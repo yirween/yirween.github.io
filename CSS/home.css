@@ -1,0 +1,24 @@
+body {
+    background-color: #fafafa;
+}
+.info {
+    float: left;
+}
+
+.cards {
+    float: left;
+}
+
+.countdown{
+    float:left;
+    position: relative;
+    width: 40%;
+    margin: 30px 10% 20px;
+    padding: 30px 50px;
+    color:#AbAA9a;
+    background-color: #fff; 
+    backdrop-filter: blur(2px);
+    border-radius: 25px;
+    box-sizing:border-box;
+}
+
