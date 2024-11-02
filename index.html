@@ -1,52 +1,37 @@
 <!DOCTYPE html>
 
-<html>
+<html onclick="setTimeout(next(),2000)">
   	<head>
     	<title>yirween</title>
     	<link rel="apple-touch-icon" href="./Sprite/yirween头像（改,圆）.png">
     	<link rel="shortcut icon" href="./Sprite/yirween头像（改,圆）.png">
-		<link rel="stylesheet" href="./CSS/all.css">
 		<link rel="stylesheet" href="./CSS/index.css">
-		<link rel="stylesheet" href="./CSS/loading.css">
 		<link rel="stylesheet" href="./CSS/rain.css">
   	</head>
   	<body>
+		<div class="ToHome-Light"></div>
 		<div class="beijing" >
-			<img src="./Sprite/sundown.jpg" style="object-fit: cover;position: fixed;top: -10px;left: -10px;width: 105%;height: 105%;opacity: 1;z-index: -1;filter: blur(10px);">
-			<div class="rains">
-				<span></span><span></span><span></span><span></span><span></span>
-				<span></span><span></span><span></span><span></span><span></span>
-				<span></span><span></span><span></span><span></span><span></span>
-				<span></span><span></span><span></span><span></span><span></span>
-			</div>
+			<!-- 背景图 -->
+			<img class="background-img" src="./Sprite/sundown.jpg">
+			<!-- 下雨效果 -->
+			<div class="rains"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
 		</div>
-		<div class="head_img">
-			<div class="head_text">
-				<h1>YIRWEEN</h1>
-			</div>
+		<!-- 大标题 -->
+		<div style="height: 80%;width: 100%;">
+			<h1 style="display: grid;place-items: center;align-items: center;height: 100%;font-size: 100px;text-shadow: 0 0 60px #FFF;">WELCOME</h1>
 		</div>
-    	<h1>主页v0.014</h1>
-    	<br>
-		<div clss="home-link">
-			<h2>
-				<div class="home-link1"><a href="./link.html">网页传送门</a></div>
-			        <div class="home-link2"><a href="./recommend.html">视频、音乐推荐</a></div>
-				<div class="home-link3"><a href="./study.html">繄溦的学习笔记</a></div>
-				<div class="home-link4"><a href="./about.html">关于繄溦</a></div>
-			</h2>
+		<div class="ToHome-tip">
+			<p>点击任意处或按下键盘以进入</p>
 		</div>
-
-		<div class="tip">
-			<p id="randomNumber"></p>
-		</div>
-		<div class="countdown">
-	  		<h3>距离2026年高考开始还有：
-	  		<div id="timer"></div></h3>
-		</div>
-  
-		<script src="./JS/tip.js"></script>
-		<script src="./JS/change-background.js"></script>
-		<script src="./JS/change-textcolor.js"></script>
-		<script src="./JS/time.js"></script>
 	</body>
+	<script>
+		document.addEventListener('keydown',function(next) {
+			setTimeout(function() {
+				window.location.href='./home.html';
+			},2000)
+		})
+		function next() {
+			window.location.href='./home.html';
+		}
+	</script>
 </html>
