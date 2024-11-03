@@ -1,9 +1,11 @@
 html {
   height: 100%;
+  width: 100%;
 }
 
 body {
   height: 100%;
+  width: 100%;
   color: #fff;
   overflow: hidden;
 }
@@ -74,4 +76,17 @@ body {
   height: 115%;
   opacity: 0;
   z-index: 9;
+}
+
+.animate {
+  animation: opacityAnimation 2s forwards; /* 2秒内完成动画，且保持结束状态 */
+}
+
+@keyframes opacityAnimation {
+  0% {
+      opacity: 1;
+  }
+  100% {
+      opacity: 0;
+  }
 }

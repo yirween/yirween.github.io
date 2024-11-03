@@ -1,12 +1,63 @@
 body {
-    background-color: #fafafa;
+    background-color: #fdfbfb;
 }
+a {
+    color: #000;
+    text-decoration:none;
+}a:hover {
+    @keyframes a {
+    color: #AAAAAA;
+    }
+}
+/* 左侧栏 */
 .info {
+    background-color: #ebedee;
     float: left;
+    width: 25%;
+    height: 90%;
+    margin: 5%;
+    border-radius: 25px;
+}@media (max-width: 712px) {.info {display: none;}}@media (min-width: 713px) {.info {display: block;}}
+
+.info > .headimg {/* 头像 */
+    width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 16px;
+}.info > .headimg > .headimginner {
+    width: 60%;
+    margin: auto;
+}.info > .yirweennameandsentence {
+    width: 100%;
+    height: auto;
+    margin: 16px 0;
+}.info > .yirweennameandsentence > .nameofyirween {
+    width: 3.7em;
+    margin: 0 auto;
+    font-size: 3vw;
+    color: #596164;
 }
+
+.info > .line {/*分割线*/
+    background-color: #00000030;
+    margin: 16px auto;
+    width: 88%;
+    height: 1px;
+}
+
+.info > .yirween-account {/* 其它账号 */
+    margin: 50px 5%;
+}.info > .yirween-account-bili {
+    width: auto;
+    margin: auto;
+}
+
 
 .cards {
     float: left;
+
+    box-shadow: 0 0 60px #000;
 }
 
 .countdown{
@@ -15,10 +66,18 @@ body {
     width: 40%;
     margin: 30px 10% 20px;
     padding: 30px 50px;
-    color:#AbAA9a;
-    background-color: #fff; 
+    color:#eedadc;
+    background-color: #AAAAAA; 
     backdrop-filter: blur(2px);
     border-radius: 25px;
     box-sizing:border-box;
 }
 
+/* says */
+#says {
+    opacity: 1;
+    transition: opacity 1s; /* 淡出淡入的时间 */
+}
+.fade-out {
+    opacity: 0;
+}
