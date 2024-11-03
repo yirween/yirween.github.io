@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html onclick="setTimeout(next(),2000)">
+<html onclick="setTimeout(next,0)" id="animateMe">
   	<head>
     	<title>yirween</title>
     	<link rel="apple-touch-icon" href="./Sprite/yirween头像（改,圆）.png">
@@ -17,21 +17,30 @@
 			<div class="rains"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
 		</div>
 		<!-- 大标题 -->
-		<div style="height: 80%;width: 100%;">
-			<h1 style="display: grid;place-items: center;align-items: center;height: 100%;font-size: 100px;text-shadow: 0 0 60px #FFF;">WELCOME</h1>
+		<div style="height: 80%; width: 100%; display: grid; place-items: center;">
+    		<h1 style="font-size: 100px; text-shadow: 0 0 60px #FFF;">WELCOME</h1>
 		</div>
+
 		<div class="ToHome-tip">
 			<p>点击任意处或按下键盘以进入</p>
 		</div>
 	</body>
 	<script>
 		document.addEventListener('keydown',function(next) {
+			var element = document.getElementById('animateMe');
+    		element.classList.add('animate');
 			setTimeout(function() {
 				window.location.href='./home.html';
 			},2000)
 		})
 		function next() {
-			window.location.href='./home.html';
-		}
+    var element = document.getElementById('animateMe');
+    element.classList.add('animate');
+    // 这里最好加上一个延时来确保动画完成后再跳转，但如果动画时间很短可以省略
+    // 为了示例清晰，这里还是加上一个短暂的延时
+    setTimeout(function() {
+        window.location.href = './home.html';
+    }, 2000); // 假设动画持续时间为0.5秒，您可以根据实际情况调整这个时间
+}
 	</script>
 </html>
