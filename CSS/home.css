@@ -1,13 +1,10 @@
 body {
     background-color: #fdfbfb;
+    height: 100%;
 }
 a {
     color: #000;
     text-decoration:none;
-}a:hover {
-    @keyframes a {
-    color: #AAAAAA;
-    }
 }
 /* 左侧栏 */
 .info {
@@ -17,54 +14,109 @@ a {
     height: 90%;
     margin: 5%;
     border-radius: 25px;
+    overflow: hidden;
 }@media (max-width: 712px) {.info {display: none;}}@media (min-width: 713px) {.info {display: block;}}
-
-.info > .headimg {/* 头像 */
+.info .headimg {/* 头像 */
     width: 100%;
     height: auto;
     margin-left: auto;
     margin-right: auto;
     margin-top: 16px;
-}.info > .headimg > .headimginner {
+}.info .headimg .headimginner {
     width: 60%;
     margin: auto;
-}.info > .yirweennameandsentence {
+}.info .yirweennameandsentence {
     width: 100%;
     height: auto;
     margin: 16px 0;
-}.info > .yirweennameandsentence > .nameofyirween {
+}.info .yirweennameandsentence .nameofyirween {
     width: 3.7em;
     margin: 0 auto;
     font-size: 3vw;
     color: #596164;
+}.info .yirweennameandsentence .says {/*一言*/
+    transition: opacity 1s; 
+    margin-top: 16px;
+    color: #596164;
+    text-align: center;
 }
-
-.info > .line {/*分割线*/
+.info .line {/*分割线*/
     background-color: #00000030;
     margin: 16px auto;
     width: 88%;
     height: 1px;
 }
-
-.info > .yirween-account {/* 其它账号 */
+.info .yirween-account {/* 其它账号 */
     margin: 50px 5%;
-}.info > .yirween-account-bili {
+}.info .yirween-account-bili {
     width: auto;
     margin: auto;
 }
 
+.line-middle {
+    height: 80%;
+    width: 1px;
+    margin: 10% 0;
+    float: right;
+    background-color: #00000030;
+}@media (max-width:712px) {.line-middle{display: hidden;}}
 
-.cards {
-    float: left;
-
-    box-shadow: 0 0 60px #000;
+/* 右侧内容 */
+/* 基础框架 */
+.home-main {
+    padding: 4%;
+    padding-top: 5%;
+    float: right;
+    width: 56%;
+    overflow: hidden;
+}@media (max-width:712px) {.home-main {width: 91%;}}
+.home-main .main-main {
+    height: 100%;
+    width: 100%;
 }
-
+/* 顶部文本 */
+.main-title {
+    width: auto;
+}
+/* 选项卡 */
+.cards {
+    width: 100%;
+    padding: 8px;
+    margin-top: 4%;
+}
+.cards ul {
+    list-style-type: none;
+}
+.cards div {
+    background-color: #D0C6CF;
+    width: 30%;
+    height: 100px; 
+    margin: 8px;
+    float: left; 
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    box-shadow: 0 1px 3px #000;
+    transition: transform 0.5s, box-shadow 0.5s ease;
+    text-align: center; 
+}.cards div:hover{/*选项卡动画*/
+    transform: scale(1.01) translateY(-5px);
+    box-shadow: 0 6px 5px #00000050;
+}@media (min-width: 1024px) {.cards div {width: 25%;}}
+.cards svg,
+.cards p {
+    margin-bottom: 0;
+}
+.links p:last-child {
+    margin-bottom: 0;
+}
 .countdown{
     float:left;
     position: relative;
-    width: 40%;
-    margin: 30px 10% 20px;
+    width: 100%;
+    margin: 10% 5% 0;
     padding: 30px 50px;
     color:#eedadc;
     background-color: #AAAAAA; 
@@ -73,11 +125,3 @@ a {
     box-sizing:border-box;
 }
 
-/* says */
-#says {
-    opacity: 1;
-    transition: opacity 1s; /* 淡出淡入的时间 */
-}
-.fade-out {
-    opacity: 0;
-}

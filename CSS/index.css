@@ -9,6 +9,29 @@ body {
   color: #fff;
   overflow: hidden;
 }
+.maintitle-blur {
+  position: absolute;
+  height: 80%; 
+  width: 100%; 
+  display: grid; 
+  place-items: center;
+  font-size: 60px; 
+  text-shadow: 0 0 60px #FFF;
+  filter: blur(10px);
+  z-index: -1;
+}
+.maintitle {
+  height: 80%; 
+  width: 100%; 
+  display: grid; 
+  place-items: center;
+  font-size: 60px; 
+  text-shadow: 0 0 60px #FFF;
+  z-index: 1; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .ToHome-tip {
   position: fixed;
@@ -53,13 +76,11 @@ body {
       filter: blur(10px);
   }
 }
-
 @media (min-width: 1000px) and (max-width: 1500px) {
   .background-img {
       filter: blur(15px);
   }
 }
-
 @media (min-width: 1501px) {
   .background-img {
       filter: blur(20px);
