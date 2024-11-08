@@ -1,20 +1,32 @@
 body {
     background-color: #fdfbfb;
     height: 100%;
+    animation: appearAtall 5s forwards;
+}@keyframes appearAtall {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 a {
     color: #000;
     text-decoration:none;
 }
 /* 左侧栏 */
+.leftThings {
+    width: 24%;
+    float: left;
+}
 .info {
     background-color: #ebedee;
-    float: left;
-    width: 25%;
+    width: 100%;
     height: 90%;
     margin: 5%;
     border-radius: 25px;
     overflow: hidden;
+    animation: infoappear 1s forwards ease-out;
 }@media (max-width: 712px) {.info {display: none;}}@media (min-width: 713px) {.info {display: block;}}
 .info .headimg {/* 头像 */
     width: 100%;
@@ -48,10 +60,21 @@ a {
 }
 .info .yirween-account {/* 其它账号 */
     margin: 50px 5%;
-}.info .yirween-account-bili {
-    width: auto;
-    margin: auto;
+}.info svg {
+    float: left;
+    margin: 0 2% 10% 8%;
 }
+.effactive-bottons {
+    background-color: #ebedee;
+    width: 86%;
+    height: 10%;
+    padding: 8%;
+    margin: 5%;
+    border-radius: 25px;
+    overflow: hidden;
+    animation: infoappear 1s forwards ease-out;    
+}
+
 
 .line-middle {
     height: 80%;
@@ -69,6 +92,7 @@ a {
     float: right;
     width: 56%;
     overflow: hidden;
+    animation: mainappear 1s forwards ease-in-out;
 }@media (max-width:712px) {.home-main {width: 91%;}}
 .home-main .main-main {
     height: 100%;
@@ -124,4 +148,20 @@ a {
     border-radius: 25px;
     box-sizing:border-box;
 }
-
+/* 初加载动画 */
+@keyframes infoappear {
+    0% {
+        transform: translateX(-50%)
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes mainappear {
+    0% {
+        transform: translateX(50%)
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
