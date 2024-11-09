@@ -18,7 +18,7 @@ a {
 .leftThings {
     width: 24%;
     float: left;
-}
+}@media (max-width: 712px) {.leftThings {display: none;}}@media (min-width: 713px) {.leftThings {display: block;}}
 .info {
     background-color: #ebedee;
     width: 100%;
@@ -27,7 +27,7 @@ a {
     border-radius: 25px;
     overflow: hidden;
     animation: infoappear 1s forwards ease-out;
-}@media (max-width: 712px) {.info {display: none;}}@media (min-width: 713px) {.info {display: block;}}
+}
 .info .headimg {/* 头像 */
     width: 100%;
     height: auto;
@@ -147,6 +147,14 @@ a {
     backdrop-filter: blur(2px);
     border-radius: 25px;
     box-sizing:border-box;
+}
+
+.right-end-botton {
+    position: absolute;
+    right: 8px;
+    margin: 0;
+    border-radius: 100%;
+    border: 1px;
 }
 /* 初加载动画 */
 @keyframes infoappear {
