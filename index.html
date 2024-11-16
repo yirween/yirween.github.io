@@ -11,6 +11,7 @@
 		<link rel="stylesheet" href="./CSS/rain.css">
   	</head>
   	<body>
+		<iframe src="./home.html" style="display: none;"></iframe>
 		<div class="ToHome-Light"></div>
 		<div class="beijing" >
 			<!-- 背景图 -->
@@ -27,21 +28,16 @@
 		</div>
 	</body>
 	<script>
-		document.addEventListener('keydown',function(next) {
+		document.addEventListener('keydown',function() {
 			var element = document.getElementById('animateMe');
-    		element.classList.add('animate');
-			setTimeout(function() {
-				window.location.href='./home.html';
-			},2000)
+    		next()
 		})
 		function next() {
     var element = document.getElementById('animateMe');
     element.classList.add('animate');
-    // 这里最好加上一个延时来确保动画完成后再跳转，但如果动画时间很短可以省略
-    // 为了示例清晰，这里还是加上一个短暂的延时
     setTimeout(function() {
         window.location.href = './home.html';
-    }, 2000); // 假设动画持续时间为0.5秒，您可以根据实际情况调整这个时间
+    }, 2000);
 }
 	</script>
 </html>

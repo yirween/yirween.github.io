@@ -100,7 +100,7 @@ body {
 }
 
 .animate {
-  animation: opacityAnimation 2s forwards; /* 2秒内完成动画，且保持结束状态 */
+  animation: opacityAnimation 1s forwards; 
 }
 
 @keyframes opacityAnimation {
