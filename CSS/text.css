@@ -2,6 +2,11 @@ body {
     margin: 0;
     background-color: #f1f2f3;
 }
+a {
+    color: #000;
+    text-decoration-line: none;
+
+}
 
 .text-box-max-main-pro-master {
     background-color: rgb(255, 255, 255);
@@ -29,6 +34,10 @@ h2 {padding: 20px 60px 0;}h3 {padding: 15px 64px 0;}h4 {padding: 10px 56px 0;}h5
     color: #666;
     padding: 0 56px;
 }
+.word-count {
+    color: #666;
+    padding: 0 56px;
+}
 .Theline {
     margin: 12px 56px;
     width: 60%;
@@ -37,5 +46,6 @@ h2 {padding: 20px 60px 0;}h3 {padding: 15px 64px 0;}h4 {padding: 10px 56px 0;}h5
 }
 
 p {
+    color: #333;
     padding: 1px 56px;
 }

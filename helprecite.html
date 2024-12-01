@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Text Replacement</title>
+    <style>
+        .replaced {
+            color: red;
+        }
+        #article {
+            width: 708px;
+            margin: 20px auto;
+        }
+        #controls {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="controls">
+        <label for="percentage">输入百分比:</label>
+        <input type="number" id="percentage" min="0" max="100">
+        <button onclick="replaceText()">替换文字</button>
+    </div>
+
+    <div id="article">
+        <p>
+            秦孝公据崤函之固，拥雍州之地，君臣固守以窥周室，有席卷天下，包举宇内，囊括四海之意，并吞八荒之心。当是时也，商君佐之，内立法度，务耕织，修守战之
+            具，外连衡而斗诸侯。于是秦人拱手而取西河之外。
+            <br>
+            及至始皇，奋六世之余烈，振长策而御宇内，吞二周而亡诸侯，履至尊而制六合，执敲扑而鞭笞天下，威振四海。南取百越之地，以为桂林、象郡；百越之君，俯首
+            系颈，委命下吏。乃使蒙恬北筑长城而守藩篱，却匈奴七百余里；胡人不敢南下而牧马，士不敢弯弓而报怨。于是废先王之道，焚百家之言，以愚黔首；隳名城，杀
+            豪杰；收天下之兵，聚之咸阳，销锋镝，铸以为金人十二，以弱天下之民。然后践华为城，因河为池，据亿丈之城，临不测之渊，以为固。良将劲弩守要害之处，信
+            臣精卒陈利兵而谁何。天下已定，始皇之心，自以为关中之固，金城千里，子孙帝王万世之业也。
+        </p>
+    </div>
+
+    <script>
+        function replaceText() {
+    const percentage = parseFloat(document.getElementById('percentage').value);
+    if (isNaN(percentage) || percentage < 0 || percentage > 100) {
+        alert('请输入一个有效的百分比 (0-100)');
+        return;
+    }
+
+    const article = document.getElementById('article');
+    const textNodes = getTextNodesIn(article);
+    const totalChars = textNodes.reduce((sum, node) => sum + node.nodeValue.length, 0);
+    const charsToReplace = Math.round((percentage / 100) * totalChars);
+
+    let replacedChars = 0;
+    textNodes.forEach(node => {
+        let text = node.nodeValue;
+        let nodeLength = text.length;
+        let replaceCount = Math.min(charsToReplace - replacedChars, nodeLength);
+
+        if (replaceCount > 0) {
+            const indices = getRandomIndices(nodeLength, replaceCount);
+            let newText = '';
+            for (let i = 0; i < nodeLength; i++) {
+                if (indices.includes(i)) {
+                    newText += '<span class="replaced">-</span>';
+                    replacedChars++;
+                } else {
+                    newText += text[i];
+                }
+            }
+            // 使用innerHTML来解析HTML标签，从而应用CSS样式
+            const parent = node.parentNode;
+            parent.innerHTML = parent.innerHTML.replace(text, newText);
+        }
+    });
+}
+
+// 获取所有文本节点
+function getTextNodesIn(element) {
+    const nodes = [];
+    const walker = document.createTreeWalker(element, NodeFilter.SHOW_TEXT, null, false);
+    let node;
+    while (node = walker.nextNode()) {
+        if (node.nodeValue.trim() !== '') { // 排除空白文本节点
+            nodes.push(node);
+        }
+    }
+    return nodes;
+}
+
+// 获取随机索引数组
+function getRandomIndices(length, count) {
+    const indices = [];
+    while (indices.length < count) {
+        const index = Math.floor(Math.random() * length);
+        if (!indices.includes(index)) {
+            indices.push(index);
+        }
+    }
+    return indices;
+}
+
+    </script>
+</body>
+</html>
