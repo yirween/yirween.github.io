@@ -36,6 +36,7 @@ a {
     margin-left: auto;
     margin-right: auto;
     margin-top: 16px;
+    border-radius: 50%;
 }.info .headimg .headimginner {
     width: 60%;
     margin: auto;
