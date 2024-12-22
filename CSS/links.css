@@ -1,0 +1,64 @@
+html,body {
+    margin: 0;
+    background-color: #f0f0f0;
+}
+a {
+    color: #222;
+}
+.title-链接 {
+    width: 100%;
+    border: 0 0 1px 0;
+    border-color: #222;
+    margin: 4% 0 0 10%;
+    font-size: 30px;
+}h2 {margin: 0;}
+.title-链接-line {
+    height: 1px;
+    width: 50%;
+    margin: 8px 0 8px 10%;
+    background-color: #888;
+}
+.cards {
+    width: 100%;
+    height: auto;
+    padding: 0 10%;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+.cards .link_card {
+    width: 20vw;
+    height: 100px;
+    margin: 8px;
+    border-radius: 8px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.link_cards:hover {
+    box-shadow: 5px 5px 5px #000;
+}
+.cards .link_card .link_icon {
+    width: 29%;
+    height: 100%;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cards .link_card .card_line {
+    width: 1px;
+    height: 70%;
+    margin: 15% 0;
+    background-color: #888;
+}
+.cards .link_card .link_text {
+    width: 68%;
+    float: left;
+}
+.cards .link_card .card_detial {
+    display: none;
+    color: #444;
+    margin-top: 8px;
+}
