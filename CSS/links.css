@@ -5,20 +5,36 @@ html,body {
 a {
     color: #222;
 }
-.title-链接 {
+.back-to-home {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    width: 70px;
+    height: 50px;
+    font-size: 25px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.back-to-home-txt {
+    height: 0;
+    display: flex;
+    align-items: center;
+}
+.title-链接 {/*链接卡片的大标题*/
     width: 100%;
     border: 0 0 1px 0;
     border-color: #222;
     margin: 4% 0 0 10%;
     font-size: 30px;
 }h2 {margin: 0;}
-.title-链接-line {
+.title-链接-line {/*链接卡片大标题和链接卡片中间的分割线*/
     height: 1px;
     width: 50%;
     margin: 8px 0 8px 10%;
     background-color: #888;
 }
-.cards {
+.cards {/*包括了所有链接卡片的大DIV*/
     width: 100%;
     height: auto;
     padding: 0 10%;
@@ -26,7 +42,7 @@ a {
     display: flex;
     flex-wrap: wrap;
 }
-.cards .link_card {
+.cards .link_card {/*链接卡片本体*/
     width: 20vw;
     height: 100px;
     margin: 8px;
@@ -35,11 +51,17 @@ a {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    transition: transform 0.5s, box-shadow 0.5s ease;
 }
-.link_cards:hover {
-    box-shadow: 5px 5px 5px #000;
+.cards .link_card:hover{/*鼠标移动到卡片上的动画*/
+    transform: scale(1.05) translateY(-5px);
+    box-shadow: 0 6px 5px #00000050;
 }
-.cards .link_card .link_icon {
+.cards .link_card:active {
+    transform: scale(1) translateY(1px);
+    box-shadow: inset 0 3px 5px #00000050;
+}
+.cards .link_card .link_icon {/*卡片上的网站图标*/
     width: 29%;
     height: 100%;
     float: left;
@@ -47,18 +69,24 @@ a {
     align-items: center;
     justify-content: center;
 }
-.cards .link_card .card_line {
+.cards .link_card .card_line {/*分割网站图标和网站描述的线*/
     width: 1px;
     height: 70%;
     margin: 15% 0;
     background-color: #888;
 }
-.cards .link_card .link_text {
+.cards .link_card .link_text {/*包括了网站标题和描述*/
     width: 68%;
     float: left;
 }
-.cards .link_card .card_detial {
+.cards .link_card .card_title {/*网站标题*/
+    
+}
+.cards .link_card .card_detial {/*网站的描述*/
     display: none;
     color: #444;
     margin-top: 8px;
+}
+.cards .link_card:hover .card_detial {
+    display: block;
 }
