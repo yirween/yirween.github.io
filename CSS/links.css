@@ -1,6 +1,9 @@
 html,body {
     margin: 0;
     background-color: #f0f0f0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
 }
 a {
     color: #222;
@@ -23,21 +26,25 @@ a {
 }
 .title-链接 {/*链接卡片的大标题*/
     width: 100%;
-    border: 0 0 1px 0;
     border-color: #222;
-    margin: 4% 0 0 10%;
+    margin: 4% 0 0 7.5%;
     font-size: 30px;
 }h2 {margin: 0;}
+.title-链接-detial {/*卡片区块的详细描述*/
+    width: 100%;
+    margin-left: 7.5%;
+    color: #444;
+}
 .title-链接-line {/*链接卡片大标题和链接卡片中间的分割线*/
     height: 1px;
     width: 50%;
-    margin: 8px 0 8px 10%;
+    margin: 8px 0 8px 7%;
     background-color: #888;
 }
-.cards {/*包括了所有链接卡片的大DIV*/
+.cards {/*一个卡片区块*/
     width: 100%;
     height: auto;
-    padding: 0 10%;
+    padding: 0 7.5%;
     text-align: center;
     display: flex;
     flex-wrap: wrap;
@@ -80,13 +87,19 @@ a {
     float: left;
 }
 .cards .link_card .card_title {/*网站标题*/
-    
+    height: auto;
 }
 .cards .link_card .card_detial {/*网站的描述*/
     display: none;
     color: #444;
     margin-top: 8px;
+    font-size: x-small;
 }
 .cards .link_card:hover .card_detial {
     display: block;
+}
+.bottom-things {
+    width: 100%;
+    height: 16%;
+    background-color: #EEE;
 }
