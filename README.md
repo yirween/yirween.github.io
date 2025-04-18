@@ -1,6 +1,10 @@
+# HI
 
-啊！这是繄溦的githubpage！
-made by ctrl c v 大法
-别看！
+这里是我的个人主页
+Here is my personal homepage
 
-刚学这些东西，你可能看到一些令人血压升高的操作（希望可以联系我指正）
+会存放一些奇奇怪怪的东西
+It will store some strange things
+
+如果你感兴趣可以访问[yirween.github.io](https://yirween.github.io/)
+If you are interested, you can visit [yirween. github. io]（ https://yirween.github.io/ ）
