@@ -183,6 +183,55 @@
             transform: translateX(-320px);
         }
         }
+
+        
+        .contact {
+            width: 100%; 
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .one {
+            width: 100%; 
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .plantformname {
+            width: 20%;
+            height: 1.5em;
+            padding-bottom: 16px;
+            border: 1px #000;
+        }
+        .plantformlink {
+            width: 40%;
+            height: 1.5em;
+            padding-bottom: 16px;
+        }
+        .plantformdetial {
+            width: 40%;
+            height: 1.5em;
+            padding-bottom: 16px;
+        }
+
+        .info-card {/*About页资料卡片*/
+            height: auto;
+            width: 70%;
+            padding: 32px;
+            border-radius: 16px;
+            background-color: aliceblue;
+            box-shadow: 1px 6px 20px 0px #888;
+            transition: all .5s;
+        }
+
+        .info-card:hover {
+            transform: translateY(-2px) scale(1.01);
+            box-shadow: 1px 6px 25px 0px #aaa;
+        }
     </style>
 </head>
 
@@ -307,7 +356,7 @@
         // 鼠标移动到按钮显示信息
         const tell = document.getElementById('tell');
         const telltext = document.getElementById('telltext');
-        const telldata = ["前往我的博客站","关于我","做的各种小项目","在其它地方找到我"];
+        const telldata = ["前往我的博客站","关于我","做的各种小项目","在其它地方找到我","复制好了喵"];
 
         function showtell(mun) {
             tell.classList.add("showtell");
@@ -336,7 +385,12 @@
                     learnmore.innerHTML = `
                         <h1>About</h1>
                         <p>一个浙江北部的普通高二学生,目标是保持快乐！</p>
-                        <p></p>
+                        <p>下面是我的资料卡片↓</p>
+                        <div class="info-card">
+                            <p>姓名：yirween</p>
+                            <p>其它名字：繄溦、Misaki Yirween</p>
+                            <p>IP属地：浙江</p>
+                        </div>
                         `
                     break;
 
@@ -345,6 +399,12 @@
                     learnmore.classList.add("showlearnmore");
                     learnmore.innerHTML = `
                         <h1>Projects</h1>
+                        <div>
+                            <ul>
+                            <il><a href="./YivemistMusicBox">YivemistMusicBox</a></il>
+                            </ul>
+                        </div>
+                        
                         `
                     break;
 
@@ -353,7 +413,23 @@
                     learnmore.classList.add("showlearnmore");
                     learnmore.innerHTML = `
                         <h1>Contact</h1>
-                        
+                        <div class="contact">
+                            <div class="one"><a href="//space.bilibili.com/648129231" class="one">
+                                <div class="plantformname">Bilibili</div>
+                                <div class="plantformlink">space.bilibili.com/648129231</div>
+                                <div class="plantformdetial"></div>
+                            </a></div>
+                            <div class="one">
+                                <div class="plantformname" onclick="copytext(qq)">QQ</div>
+                                <div class="plantformlink" onclick="copytext(wx)">2155384970</div>
+                                <div class="plantformdetial"></div>
+                            </div>
+                            <div class="one">
+                                <div class="plantformname">微信</div>
+                                <div class="plantformlink">s340482</div>
+                                <div class="plantformdetial"></div>
+                            </div>
+                        </div>
                         `
                     break;
 
@@ -378,6 +454,11 @@
             this.style.transform = 'scale(1)';
         });
         });
+
+        // 点击按钮复制文本
+        function copytext(copytext) {
+
+        }
     </script>
 </body>
 </html>
